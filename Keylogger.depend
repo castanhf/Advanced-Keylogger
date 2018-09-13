@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1532700486 source:c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\main.cpp
+	<iostream>
+	<windows.h>
+	"Helper.h"
+	"KeyConstants.h"
+	"Base64.h"
+
+1532616538 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\helper.h
+	<ctime>
+	<string>
+	<sstream>
+	<fstream>
+
+1531839399 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\keyconstants.h
+	<map>
+	<string>
+
+1533670471 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\base64.h
+	<vector>
+	<string>
+
