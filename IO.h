@@ -11,7 +11,7 @@
 
 namespace IO
 {
-    std::string GetOurPath(const bool append_seperator - false)
+    std::string GetOurPath(const bool append_seperator = false)
     {
         //getenv - get environment function
         std::string appdata_dir(getenv("APPDATA"));
