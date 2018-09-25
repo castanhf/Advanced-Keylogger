@@ -1,12 +1,16 @@
 # depslib dependency file v1.0
-1532700486 source:c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\main.cpp
+1537894026 source:c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\main.cpp
 	<iostream>
 	<windows.h>
 	"Helper.h"
 	"KeyConstants.h"
 	"Base64.h"
+	"IO.h"
+	"Timer.h"
+	"SendMail.h"
+	"KeybHook.h"
 
-1532616538 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\helper.h
+1537899151 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\helper.h
 	<ctime>
 	<string>
 	<sstream>
@@ -19,4 +23,32 @@
 1533670471 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\base64.h
 	<vector>
 	<string>
+
+1537674727 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\io.h
+	<string>
+	<cstdlib>
+	<fstream>
+	"windows.h"
+	"Helper.h"
+	"Base64.h"
+
+1537898428 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\timer.h
+	<thread>
+	<chrono>
+
+1537895276 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\sendmail.h
+	<fstream>
+	<vector>
+	"windows.h"
+	"IO.h"
+	"Timer.h"
+	"Helper.h"
+
+1537897519 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\keybhook.h
+	<iostream>
+	<fstream>
+	"windows.h"
+	"KeyConstants.h"
+	"Timer.h"
+	"SendMail.h"
 

@@ -1,0 +1,123 @@
+[25.09.2018 12:08:56]
+Hook Started... Timer Started
+
+[25.09.2018 12:09:33]
+Mail was not sent! Error code: 259
+
+[25.09.2018 12:09:33]
+<From SendMail> Return code: 32764
+
+[25.09.2018 12:10:05]
+Mail was not sent! Error code: 3
+
+[25.09.2018 12:10:35]
+Mail was not sent! Error code: 3
+
+[25.09.2018 12:11:06]
+Mail was not sent! Error code: 3
+
+[25.09.2018 12:11:37]
+Mail was not sent! Error code: 3
+
+[25.09.2018 12:12:08]
+Mail was not sent! Error code: 3
+
+[25.09.2018 12:12:40]
+Mail was not sent! Error code: 3
+
+[25.09.2018 12:13:11]
+Mail was not sent! Error code: 3
+
+[25.09.2018 12:13:42]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:01:13]
+Hook Started... Timer Started
+
+[25.09.2018 13:01:44]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:01:44]
+<From SendMail> Return code: 32764
+
+[25.09.2018 13:02:15]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:02:47]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:03:18]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:03:49]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:04:20]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:04:51]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:05:22]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:05:52]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:06:23]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:06:54]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:07:25]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:07:56]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:08:27]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:08:58]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:09:29]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:10:00]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:10:31]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:11:02]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:11:33]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:12:04]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:12:35]
+Mail was not sent! Error code: 3
+
+[25.09.2018 13:13:06]
+Mail was not sent! Error code: 3
+
+[25.09.2018 14:12:12]
+Mail was not sent! Error code: 3
+
+[25.09.2018 14:12:43]
+Mail was not sent! Error code: 3
+
+[25.09.2018 14:13:14]
+Mail was not sent! Error code: 3
+
+[25.09.2018 14:13:45]
+Mail was not sent! Error code: 3
+
+[25.09.2018 14:14:16]
+Mail was not sent! Error code: 3
+
