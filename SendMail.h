@@ -12,9 +12,9 @@
 #define SCRIPT_NAME "sm.ps1"
 
 namespace Mail {
-    #define X_EM_TO "castanhf@mail.gvsu.edu"
-    #define X_EM_FROM "castanhf@mail.gvsu.edu"
-    #define X_EM_PASS "Gv55840430"
+    #define X_EM_TO "something@mail.gvsu.edu"
+    #define X_EM_FROM "something@mail.gvsu.edu"
+    #define X_EM_PASS "qwertyui345"
 
 //No need to change the following content
 const std::string &PowerShellScript =
