@@ -4,13 +4,13 @@
 	<Project>
 		<Option title="Keylogger" />
 		<Option pch_mode="2" />
-		<Option compiler="gcc" />
+		<Option compiler="tdm64-gcc_64-bit_compiler" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/Keylogger" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
-				<Option compiler="gcc" />
+				<Option compiler="tdm64-gcc_64-bit_compiler" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
@@ -19,7 +19,28 @@
 				<Option output="bin/Release/Keylogger" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
-				<Option compiler="gcc" />
+				<Option compiler="tdm64-gcc_64-bit_compiler" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Debug64">
+				<Option output="bin/Debug64/Keylogger" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug64/" />
+				<Option type="1" />
+				<Option compiler="tdm64-gcc_64-bit_compiler" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release64">
+				<Option output="bin/Release64/Keylogger" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release64/" />
+				<Option type="1" />
+				<Option compiler="tdm64-gcc_64-bit_compiler" />
 				<Compiler>
 					<Add option="-O2" />
 				</Compiler>
@@ -31,11 +52,20 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="C:/wxWidgets-3.0.2/lib/gcc_lib/mswud changes to C:/wxWidgets-3.0.2/lib/gcc_lib64/mswud" />
 		</Compiler>
+		<ResourceCompiler>
+			<Add directory="C:/wxWidgets-3.0.2/lib/gcc_lib/mswud changes to C:/wxWidgets-3.0.2/lib/gcc_lib64/mswud" />
+		</ResourceCompiler>
+		<Linker>
+			<Add directory="C:/wxWidgets-3.0.2/lib/gcc_lib changes to C:/wxWidgets-3.0.2/lib/gcc_lib64" />
+		</Linker>
 		<Unit filename="Base64.h" />
 		<Unit filename="Helper.h" />
 		<Unit filename="IO.h" />
 		<Unit filename="KeyConstants.h" />
+		<Unit filename="KeybHook.h" />
+		<Unit filename="SendMail.h" />
 		<Unit filename="Timer.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
