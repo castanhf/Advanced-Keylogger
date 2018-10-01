@@ -1,30 +1,24 @@
 # depslib dependency file v1.0
-1537894026 source:c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\main.cpp
+1538350204 source:c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\main.cpp
 	<iostream>
 	<windows.h>
-	"Helper.h"
-	"KeyConstants.h"
-	"Base64.h"
-	"IO.h"
-	"Timer.h"
-	"SendMail.h"
 	"KeybHook.h"
 
-1537899151 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\helper.h
+1538348635 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\helper.h
 	<ctime>
 	<string>
 	<sstream>
 	<fstream>
 
-1537904480 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\keyconstants.h
+1538349326 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\keyconstants.h
 	<map>
 	<string>
 
-1537904368 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\base64.h
+1538373579 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\base64.h
 	<vector>
 	<string>
 
-1537903905 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\io.h
+1538374444 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\io.h
 	<string>
 	<cstdlib>
 	<fstream>
@@ -32,11 +26,11 @@
 	"Helper.h"
 	"Base64.h"
 
-1537898428 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\timer.h
+1538350204 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\timer.h
 	<thread>
 	<chrono>
 
-1537917423 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\sendmail.h
+1538376493 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\sendmail.h
 	<fstream>
 	<vector>
 	"windows.h"
@@ -44,7 +38,7 @@
 	"Timer.h"
 	"Helper.h"
 
-1537897519 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\keybhook.h
+1538349311 c:\users\filipe\codeblocks\myc++projects\udemy course - keylogger\keylogger\keybhook.h
 	<iostream>
 	<fstream>
 	"windows.h"

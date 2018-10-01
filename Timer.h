@@ -45,7 +45,7 @@ class Timer {
     // we have more control of this function because we let it pass pass it to a thread
     void ThreadFunc() {
 
-        if(CallNumber == INFINITE) {
+        if(CallNumber == Infinite) {
             while(Alive) {
                 SleepAndRun();
             }
@@ -60,7 +60,7 @@ class Timer {
         static const long Infinite = -1L;
 
         // default constructor
-        Timer(){}
+        Timer() {}
 
         // this constructor accepts a reference to a constant function object
         Timer(const std::function<void(void)> &f) : funct(f) {}
@@ -78,9 +78,12 @@ class Timer {
             if(IsAlive()) {
                 return;
             }
+
             Alive = true;
             repeat_count = CallNumber;
+
             if(Async) {
+
                 Thread = std::thread(ThreadFunc, this);
             }
             else {
@@ -95,7 +98,7 @@ class Timer {
             Thread.join();
         }
 
-        void setFunction(const std::function<void(void)> &f) {
+        void SetFunction(const std::function<void(void)> &f) {
 
             funct = f;
         }
@@ -125,6 +128,7 @@ class Timer {
         unsigned long Interval() const {return interval.count();} // we use .count because interval is of type chrono::milliseconds
 
         const std::function<void(void)> &Function() const {
+
             return funct;
         }
 };
