@@ -31,8 +31,8 @@ namespace Base64 {
         return s;
     }
 
-    std::string DecryptB64 (std::string s)
-    {
+    std::string DecryptB64 (std::string s) {
+
         s = s.erase (7, 1);
         s = s.erase (1, 1);
         s = base64_decode (s);
@@ -79,13 +79,13 @@ namespace Base64 {
 
         }
 
-        if(bits > -6) // at least 1 character was inserted
-        {
+        if(bits > -6) { // at least 1 character was inserted
+
             ret.push_back(BASE64_CODES[((val << 8) >> (bits + 8)) & b63]);
         }
 
-        while(ret.size() % 4) // evaluated to true if it's not zero, otherwise it's false
-        {
+        while(ret.size() % 4) { // evaluated to true if it's not zero, otherwise it's false
+
             ret.push_back('=');
         }
 
@@ -98,7 +98,8 @@ namespace Base64 {
         std::vector<int> vec(256, -1);
 
         for (int i = 0; i < 64; i++) {
-            vec [BASE64_CODES[i]] = i;
+
+            vec[BASE64_CODES[i]] = i;
         }
 
         int val = 0, bits = -8;

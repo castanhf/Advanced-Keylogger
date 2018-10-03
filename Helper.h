@@ -4,20 +4,19 @@
 #include <ctime>   // for mail-sending triggers
 #include <string>
 #include <sstream> // for conversions of various types to strings
-#include <fstream>
 
 namespace Helper
 {
     template <class T>
-
     std::string ToString(const T &);
 
-    struct DateTime
-    {
+    struct DateTime {
+
         DateTime() {
+
             // time_t comes from ctime library
             time_t ms;
-            time(&ms);
+            time (&ms);
 
             struct tm *info = localtime(&ms);
 

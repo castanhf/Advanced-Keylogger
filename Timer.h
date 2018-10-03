@@ -35,6 +35,7 @@ class Timer {
 
         std::this_thread::sleep_for(interval);
         if(Alive) {
+
             //First set of parenthesis calls "Function"
             //itself. The second set of parenthesis calls
             //for the function that is returned by "Function"
@@ -76,10 +77,12 @@ class Timer {
         void Start(bool Async = true) {
 
             if(IsAlive()) {
+
                 return;
             }
 
             Alive = true;
+
             repeat_count = CallNumber;
 
             if(Async) {

